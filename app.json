@@ -2,6 +2,7 @@
   "expo": {
     "name": "react-native-app01",
     "slug": "react-native-app01",
+    "scheme": "react-native-app01",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,6 +30,7 @@
         "projectId": "a2c3d4ff-88f2-48ef-9276-96ca67fdc61d"
       }
     },
-    "owner": "akira_i"
+    "owner": "akira_i",
+    "plugins": ["expo-router"]
   }
 }
