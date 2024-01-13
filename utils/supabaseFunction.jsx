@@ -1,18 +1,14 @@
 import { supabase } from "./supabase";
 
 export const fetchDataList = async () => {
-  const todoItems = await supabase.from("table_app01").select("*");
+  const todoItems = await supabase.from("karbo").select("*");
   return todoItems.data;
 };
 
 export const addDataItem = async (data) => {
-  await supabase.from("table_app01").insert(data);
+  await supabase.from("karbo").insert(data);
 };
 
 export const deleteDataItem = async (id) => {
-  await supabase.from("table_app01").delete().eq("id", id);
+  await supabase.from("karbo").delete().eq("id", id);
 };
-
-// export const checkTodoItem = async (id, status) => {
-//   await supabase.from("table_app01").update({ status: !status }).eq("id", id);
-// };
