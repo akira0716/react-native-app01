@@ -25,19 +25,28 @@ export default function Page() {
       <View style={styles.titleWrap}>
         <Image
           style={{
-            width: "90%",
-            height: "90%",
+            width: "100%",
+            height: "100%",
             objectFit: "contain",
           }}
           source={require("../assets/ReactNative01.png")}
         />
-        <View style={{ position: "absolute", top: 20, right: 50, zIndex: 1 }}>
+        <View style={{ position: "absolute", top: 40, right: 80, zIndex: 1 }}>
           <Image
             style={{
-              width: 100,
-              height: 100,
+              width: 80,
+              height: 80,
             }}
-            source={require("../assets/Rhaguruma.png")}
+            source={require("../assets/Gear.png")}
+          />
+        </View>
+        <View style={{ position: "absolute", top: 30, right: 50, zIndex: 1 }}>
+          <Image
+            style={{
+              width: 50,
+              height: 50,
+            }}
+            source={require("../assets/Gear.png")}
           />
         </View>
       </View>
@@ -46,6 +55,7 @@ export default function Page() {
           style={{
             width: "90%",
             height: "90%",
+            borderRadius: 50,
           }}
           source={require("../assets/StartPageImg.png")}
         />
@@ -62,6 +72,7 @@ export default function Page() {
         </View>
         <View style={styles.entryWrap2}>
           <Pressable
+            onPress={() => router.setParams()}
             onPressIn={() => onPressBtnStyleChange(0, 1)}
             onPressOut={() => onPressBtnStyleChange(1, 1)}
             style={loginBtnFlg ? styles.button : styles.button2}
