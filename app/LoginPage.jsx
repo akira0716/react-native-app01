@@ -26,8 +26,7 @@ const LoginPage = () => {
 
         // ページ遷移（パラメータ渡し）
         navigate.navigate("MyAccountPage", {
-          message1: "Hello,",
-          message2: "world!",
+          userName: "ミッギー・マウス",
         });
       }
     } catch (error) {
